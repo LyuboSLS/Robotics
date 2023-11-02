@@ -4,70 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Probe</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('your-blur-image.jpg') no-repeat center center/cover;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            background-color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 20px;
-        }
-
-        .logo {
-        width: 100px;
-        height: 100px; 
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .navbar a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        .content {
-            text-align: center;
-            padding: 50px;
-        }
-    </style>
+    <title>Robotics University Club</title>
+    <link rel="stylesheet" href="indexstyle.css">
 </head>
 
 <body>
-    <div class="header">
+    <header>
+    </header>
+
+    <nav>
         <img class="logo" src="res/indximg.png">
-    </div>
+        <a href="#about" class="about">About Us</a>
+        <a href="#events" class="events">Events</a>
+        <a href="#members" class="members">Members</a>
+        <a href="#contact" class="contact">Contact</a>
+    </nav>
 
-    <div class="navbar">
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#gallery">Gallery</a>
-    </div>
+    <div class="container">
+        <section id="about" class="section">
+            <h2 class="section-header">About Us</h2>
+            <p>Welcome to the Robotics University Club! We are passionate about robotics and technology, and we
+                welcome
+                all
+                students interested in exploring the exciting world of robotics.</p>
+        </section>
 
-    <div id="about" class="content">
-        <h2>About Us</h2>
-        <p>Your about us content goes here.</p>
-    </div>
+        <section id="events" class="section">
+            <h2 class="section-header">Events</h2>
+            <p>Stay tuned for our upcoming events, workshops, and competitions. Engage with fellow enthusiasts,
+                learn
+                new skills, and have fun!</p>
+        </section>
 
-    <div id="contact" class="content">
-        <h2>Contact</h2>
-        <p>Your contact information goes here.</p>
-    </div>
+        <section id="members" class="section">
+            <h2 class="section-header">Members</h2>
+            <p>Meet our talented and dedicated members who are driving innovation in the field of robotics. Join us
+                and
+                be part of our creative community.</p>
+        </section>
 
-    <div id="gallery" class="content">
-        <h2>Gallery</h2>
-        <p>Your gallery content goes here.</p>
+        <section id="contact" class="section">
+            <h2 class="section-header">Contact</h2>
+            <p>If you have any questions or want to get involved, feel free to reach out to us at:
+                <br>
+                Email: info@roboticsuniversityclub.com
+                <br>
+                Phone: +1 (123) 456-7890
+            </p>
+        </section>
     </div>
 
     <footer>
@@ -76,3 +60,5 @@
 </body>
 
 </html>
+
+
