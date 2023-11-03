@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
     </header>
 
     <nav>
@@ -52,11 +52,59 @@
                 Phone: +1 (123) 456-7890
             </p>
         </section>
+
+        <button id="scrollToTopBtn" class="scroll-to-top-btn"></button>
     </div>
 
     <footer>
         &copy; 2023 Клуб "Роботика" към ТУ - София, филиал Пловдив.
     </footer>
+
+    <script>
+        // Select all links with hashes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                // Get the target element corresponding to the hash
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                // Calculate the distance to scroll
+                const offsetTop = targetElement.offsetTop;
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const offset = offsetTop - headerHeight;
+    
+                // Scroll smoothly to the target element
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+<script>
+    const scrollToTopButton = document.querySelector(".scroll-to-top-btn");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            scrollToTopButton.classList.add("show");
+        } else {
+            scrollToTopButton.classList.remove("show");
+        }
+    });
+
+    scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
